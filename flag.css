@@ -1,0 +1,142 @@
+#sharedWish.wish-text{font-size:1.1rem;color:#2b7a78;max-width:760px;margin:0 auto;padding:8px 12px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));border-radius:8px}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: scrlor 3s linear 1;
+  --green: scrlgr 3s linear 1;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.layer {
+  position: relative;
+  height: 33.3%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-style: italic;
+  font-size: 3em;
+}
+
+#orange {
+  background: orange;
+  transform: translateX(0%);
+  animation: var(--orange);
+  transition: 5s all ease-in-out;
+}
+
+#white {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wheel {
+  height: 6rem;
+  width: 6rem;
+  display: block;
+  position: relative;
+  animation: runwheel 5s infinite linear;
+  z-index: 10;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.stick {
+  background: blue;
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  border-radius: 30%;
+}
+
+#green {
+  background: green;
+  transform: translateX(0%);
+  animation: var(--green);
+  transition: 5s all ease-in-out;
+}
+
+@keyframes scrlor {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes scrlgr {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes runwheel {
+  0% {}
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Greeting styles */
+#greeting{position:fixed;left:50%;top:8%;transform:translateX(-50%);text-align:center;z-index:30}
+#greeting .line1,#greeting .line2{display:block;font-size:2.2rem;font-weight:800;letter-spacing:1px}
+#greeting .line2{font-size:1.4rem;margin-top:6px}
+#greeting{position:fixed;left:50%;top:6%;transform:translateX(-50%);text-align:center;z-index:30;font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif}
+#greeting .line1,#greeting .line2{display:block;font-size:2rem;font-weight:900;letter-spacing:0.6px;line-height:1}
+#greeting .line1{font-size:2.4rem}
+#greeting .line2{font-size:1rem;margin-top:6px;opacity:.95}
+#greeting strong{font-weight:900}
+
+/* subtle entrance */
+#greeting{opacity:0;transform:translateX(-50%) translateY(-6px) scale(.98);animation: greetingIn 700ms ease forwards 300ms}
+@keyframes greetingIn{to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+
+/* colorful animated gradient text */
+#greeting .line1,#greeting .line2,#greeting strong{
+  background:linear-gradient(90deg,#ff6b6b,#f7d794,#63cdda,#5f27cd,#ff6b6b);
+  background-size:250% 250%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: rainbow 4s linear infinite;
+  text-shadow: 0 6px 18px rgba(11,72,107,0.16), 0 2px 6px rgba(0,0,0,0.08);
+}
+#sharedWish.wish-text{font-size:1.2rem;color:#184e47;max-width:760px;margin:0 auto;padding:14px 18px;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.7));border-radius:12px;border:1px solid rgba(11,72,107,0.06);font-style:italic;box-shadow:0 6px 18px rgba(11,72,107,0.06)}
+#sharedWish.wish-text::before{content:'"';font-size:1.8rem;vertical-align:top;margin-right:6px;color:#5f27cd}
+#sharedWish.wish-text::after{content:'"';font-size:1.8rem;vertical-align:bottom;margin-left:6px;color:#ff6b6b}
+
+@keyframes rainbow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* name form styles */
+#greet-form form{display:inline-flex;gap:8px;align-items:center}
+#greet-form input[type="text"]{padding:8px 10px;border-radius:6px;border:1px solid #ccc;font-size:1rem}
+#greet-form button{padding:8px 12px;border-radius:6px;border:none;background:#ff6b6b;color:#fff;font-weight:700;cursor:pointer}
+#greet-form button:hover{filter:brightness(.95)}
+
+#greet-form input:focus{outline:2px solid rgba(90,150,255,.2)}
+
+/* reset button style */
+#nameForm button#resetName{padding:8px 12px;border-radius:6px;border:none;background:#2d98da;color:#fff;font-weight:700;cursor:pointer}
+#nameForm button#resetName:hover{filter:brightness(.95)}
+
