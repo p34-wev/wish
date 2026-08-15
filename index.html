@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Independence Day</title>
+  <link rel="stylesheet" href="flag.css">
+
+</head>
+
+<body>
+  <div class="layer" id="orange"></div>
+  <div class="layer" id="white">
+    <!-- Ashoka Chakra: 24-spoke SVG rotating via CSS -->
+    <svg id="wheel" viewBox="0 0 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="18" fill="none" stroke="#054289" stroke-width="4"/>
+      <!-- 24 spokes -->
+      <g stroke="#054289" stroke-width="1.6" stroke-linecap="round">
+        <g transform="rotate(0 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(15 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(30 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(45 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(60 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(75 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(90 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(105 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(120 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(135 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(150 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(165 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(180 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(195 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(210 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(225 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(240 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(255 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(270 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(285 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(300 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(315 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(330 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+        <g transform="rotate(345 50 50)"><line x1="50" y1="32" x2="50" y2="42"/></g>
+      </g>
+      <!-- small center circle -->
+      <circle cx="50" cy="50" r="2.5" fill="#054289" />
+    </svg>
+  </div>
+  <div class="layer" id="green"></div>
+  
+  <!-- Colorful greeting -->
+  <div id="greeting" role="banner" aria-label="Greeting message">
+    <span class="line1">Happy80<sup>th</sup> Independence Day</span>
+    <span class="line2">from <strong>Priyanshi Srivastava</strong></span>
+  </div>
+  <!-- Wish text from shared link -->
+  <div id="sharedWish" class="wish-text" aria-live="polite" style="text-align:center;margin-top:10px"></div>
+  <!-- name input removed per request -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
